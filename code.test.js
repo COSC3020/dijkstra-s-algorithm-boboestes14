@@ -44,7 +44,7 @@ absAnswer = ["[0,0,2,1,1,2,5,4,3,4,7,7,6,8,4,9]",
 
 
 
-assert(JSON.stringify(dijkstra(JSON.parse(JSON.stringify(bar)), 0).flat()) == barAnswers[0]);
+jsc.assert(JSON.stringify(dijkstra(JSON.parse(JSON.stringify(bar)), 0).flat()) == barAnswers[0]);
 assert(JSON.stringify(dijkstra(JSON.parse(JSON.stringify(bar)), 1).flat()) == barAnswers[1]);
 
 assert(JSON.stringify(dijkstra(JSON.parse(JSON.stringify(foo)), 0).flat()) == fooAnswers[0]);
