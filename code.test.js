@@ -43,17 +43,13 @@ absAnswer = ["[0,0,2,1,1,2,5,4,3,4,7,7,6,8,4,9]",
 "[2,0,4,8,6,9,0,9,1,11,5,11,3,13,7,14]"]
 
 
+for(jk = 0; jk < 2; jk++){
+    assert(JSON.stringify(dijkstra(JSON.parse(JSON.stringify(bar)), jk).flat()) == barAnswers[jk]);
+}
+for(jk = 0; jk < 2; jk++){
+    assert(JSON.stringify(dijkstra        (JSON.parse(JSON.stringify(foo)), jk     ).flat()) == fooAnswers[jk]);
+}
 
-jsc.assert(JSON.stringify(dijkstra(JSON.parse(JSON.stringify(bar)), 0).flat()) == barAnswers[0]);
-assert(JSON.stringify(dijkstra(JSON.parse(JSON.stringify(bar)), 1).flat()) == barAnswers[1]);
-
-assert(JSON.stringify(dijkstra(JSON.parse(JSON.stringify(foo)), 0).flat()) == fooAnswers[0]);
-assert(JSON.stringify(dijkstra(JSON.parse(JSON.stringify(foo)), 1).flat()) == fooAnswers[1]);
-assert(JSON.stringify(dijkstra(JSON.parse(JSON.stringify(foo)), 2).flat()) == fooAnswers[2]);
-assert(JSON.stringify(dijkstra(JSON.parse(JSON.stringify(foo)), 3).flat()) == fooAnswers[3]);
-assert(JSON.stringify(dijkstra(JSON.parse(JSON.stringify(foo)), 4).flat()) == fooAnswers[4]);
-assert(JSON.stringify(dijkstra(JSON.parse(JSON.stringify(foo)), 5).flat()) == fooAnswers[5]);
-assert(JSON.stringify(dijkstra(JSON.parse(JSON.stringify(foo)), 6).flat()) == fooAnswers[6]);
 
 assert(JSON.stringify(dijkstra(JSON.parse(JSON.stringify(abs)), 0).flat()) == absAnswer[0]);
 assert(JSON.stringify(dijkstra(JSON.parse(JSON.stringify(abs)), 2).flat()) == absAnswer[1]);

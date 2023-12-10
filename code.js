@@ -1,6 +1,6 @@
 function dijkstra(graph, sourceNode) {
-    a = [0]
-    b = [0]
+    a = []
+    b = []
     for(i = 0; i < graph.length; i++){
         a[i] = [i, Infinity]
         b[i] = 0
