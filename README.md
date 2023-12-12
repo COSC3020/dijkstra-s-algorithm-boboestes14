@@ -22,7 +22,7 @@ What is the big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
 
 ## My Runtime Analysis
-The big $\Theta$ complexity of my implementation is $v^3log(v)$. This is because 
+The big $\Theta$ complexity of my implementation is $v^4$. This is because 
 when we start we have to go through every node to initialize all the nodes to 
 infinity, then we have to set the initial node to 0. This takes v time to do.
 Next, we have to go through a foe loop which will run v times as well, since we
@@ -33,5 +33,5 @@ because if we didn't then we couldn't guarantee that we have found the shortest 
 This takes e time, which can at most be $v^2$. During that time we have to see if any new distances are shorter 
 than old ones. This takes v time since we have to go through the whole
 queue to find what the old distance was and see if it is shorter than the new distance.
-This is all the times that go into the algorithm which gets us $v+v^3+v^3log(v)$, which 
-after getting rid of the smaller order terms leaves us with the time $v^3log(v)$.
+This is all the times that go into the algorithm which gets us $v+v(vlog(v)+v^3)$, which 
+after getting rid of the smaller order terms leaves us with the time $v^4$.

@@ -7,7 +7,7 @@ function dijkstra(graph, sourceNode) {
     }
     a[sourceNode][1] = 0
     for(i = 0; i < a.length;){
-        a = sortIt(a)
+        a.sort((arr, b) => b[1] - arr[1])
         for(k = 0; k < graph[a[a.length-1][0]].length; k++){
             val = findIt(a, graph[a[a.length-1][0]][k][0])
             if(val != -1 && graph[a[a.length-1][0]][k][1]+a[a.length-1][1] < a[val][1]){
@@ -19,12 +19,6 @@ function dijkstra(graph, sourceNode) {
     }
     b.reverse()
     return b;
-}
-
-
-function sortIt(arr) {
-    arr.sort((a, b) => b[1] - a[1])
-    return arr;
 }
 
 function findIt(arr, n) {
