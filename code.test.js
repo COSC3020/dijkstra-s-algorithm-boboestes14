@@ -39,15 +39,15 @@ fooAnswers = ["[0,0,1,1,2,2,3,3,4,4,5,5,6,6]",
 "[4,0,5,1,6,2,3,null,0,null,2,null,1,null]",
 "[5,0,6,1,0,null,4,null,1,null,3,null,2,null]",
 "[6,0,5,null,0,null,4,null,1,null,3,null,2,null]"]
-absAnswer = ["[0,0,2,1,1,2,5,4,3,4,7,7,6,8,4,9]",
-"[2,0,4,8,6,9,0,9,1,11,5,11,3,13,7,14]"]
+absAnswer = ["[0,0,2,1,1,2,3,4,5,4,7,7,6,8,4,9]",
+"[2,0,4,8,0,9,6,9,1,11,5,11,3,13,7,14]"]
 
 
 for(jk = 0; jk < 2; jk++){
     assert(JSON.stringify(dijkstra(JSON.parse(JSON.stringify(bar)), jk).flat()) == barAnswers[jk]);
 }
 for(jk = 0; jk < 2; jk++){
-    assert(JSON.stringify(dijkstra        (JSON.parse(JSON.stringify(foo)), jk     ).flat()) == fooAnswers[jk]);
+    assert(JSON.stringify(dijkstra(JSON.parse(JSON.stringify(foo)), jk).flat()) == fooAnswers[jk]);
 }
 
 

@@ -17,22 +17,14 @@ function dijkstra(graph, sourceNode) {
         b[a.length-1] = a[a.length-1]
         a.pop()
     }
-    return b.reverse();
+    b.reverse()
+    return b;
 }
 
 
 function sortIt(arr) {
-    //i just got this from an earlier assignment
-    for(var i = 1; i < arr.length; i++) {
-        var val = arr[i];
-        var j;
-        for(j = i; j > 0 && arr[j-1][1] > val[1]; j--) {
-          arr[j] = arr[j-1];
-        }
-        arr[j] = val;
-      }
-      arr.reverse()
-      return arr;
+    arr.sort((a, b) => b[1] - a[1])
+    return arr;
 }
 
 function findIt(arr, n) {
